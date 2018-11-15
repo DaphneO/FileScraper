@@ -29,3 +29,27 @@ def download_midi(midi_url, midi_directory, midi_name):
     except urllib2.HTTPError:
         return False, 'Error downloading the file'
     return True, 'Download succeeded'
+
+
+def download_data_set_from_csv(csv_path, midi_directory):
+    """
+    Download a data set of MIDI files, as specified by the csv file in csv_path, and put them into midi_directory
+    :param csv_path: Path to the csv file with lines in format [midi_name];[midi_url]
+    :param midi_directory: Local location for the downloaded files
+    """
+    nr_successful = 0
+    nr_unsuccessful = 0
+
+    # Open the csv file
+    with open(csv_path, 'r') as read_file:
+        csv_content = read_file.readlines()
+    for line in csv_content:
+        midi_name, midi_url = line.rstrip().split(';')[:2]
+        success, message = download_midi(midi_url, midi_directory, midi_name)
+        if success:
+            nr_successful += 1
+        else:
+            nr_unsuccessful += 1
+            print(message)
+
+    print(str(nr_successful) + ' MIDI files were downloaded successfully. ' + str(nr_unsuccessful) + ' failed.')
