@@ -91,6 +91,49 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-FileScraper.TabScraper">
+<span id="filescraper-tabscraper-module"></span><h2>FileScraper.TabScraper module<a class="headerlink" href="#module-FileScraper.TabScraper" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="FileScraper.TabScraper.download_data_set_from_csv">
+<code class="descclassname">FileScraper.TabScraper.</code><code class="descname">download_data_set_from_csv</code><span class="sig-paren">(</span><em>csv_path</em>, <em>tab_directory</em><span class="sig-paren">)</span><a class="headerlink" href="#FileScraper.TabScraper.download_data_set_from_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download a data set of tab files, as specified by the csv file in csv_path, and put them into tab_directory</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>csv_path</strong> &#8211; Path to the csv file with lines in format [url];[name];[key];[filename]</li>
+<li><strong>tab_directory</strong> &#8211; Local location for the downloaded files</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="FileScraper.TabScraper.download_tab">
+<code class="descclassname">FileScraper.TabScraper.</code><code class="descname">download_tab</code><span class="sig-paren">(</span><em>tab_url</em>, <em>tab_directory</em>, <em>tab_name</em><span class="sig-paren">)</span><a class="headerlink" href="#FileScraper.TabScraper.download_tab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to download a tab file from the Ultimate Guitar (given url) and place it in the tab_directory, called tab_name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tab_url</strong> &#8211; Location of the tab file on the Internet</li>
+<li><strong>tab_directory</strong> &#8211; Local directory where the tab file should be placed on your machine</li>
+<li><strong>tab_name</strong> &#8211; File name of your tab file</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Boolean indicating success or failure, message</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="module-FileScraper">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FileScraper" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -108,6 +151,7 @@
 <li><a class="reference internal" href="#">FileScraper package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-FileScraper.MidiScraper">FileScraper.MidiScraper module</a></li>
+<li><a class="reference internal" href="#module-FileScraper.TabScraper">FileScraper.TabScraper module</a></li>
 <li><a class="reference internal" href="#module-FileScraper">Module contents</a></li>
 </ul>
 </li>

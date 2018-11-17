@@ -13,6 +13,15 @@ FileScraper\.MidiScraper module
     :show-inheritance:
 
 
+FileScraper\.TabScraper module
+-------------------------------
+
+.. automodule:: FileScraper.TabScraper
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
 Module contents
 ---------------
 
