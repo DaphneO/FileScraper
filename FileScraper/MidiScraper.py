@@ -5,6 +5,7 @@ import urllib2
 def download_midi(midi_url, midi_directory, midi_name):
     """
     Try to download a MIDI file from the Internet, (use midi_url) and place it in the midi_directory, called midi_name
+
     :param midi_url: Location of the MIDI file on the Internet
     :param midi_directory: Local directory where the MIDI file should be placed on your machine
     :param midi_name: File name of your MIDI file
@@ -27,13 +28,14 @@ def download_midi(midi_url, midi_directory, midi_name):
         with open(target_path, 'wb') as f:
             f.write(data_to_write)
     except urllib2.HTTPError:
-        return False, 'Error downloading the file'
+        return False, 'Error downloading ' + midi_name
     return True, 'Download succeeded'
 
 
 def download_data_set_from_csv(csv_path, midi_directory):
     """
     Download a data set of MIDI files, as specified by the csv file in csv_path, and put them into midi_directory
+
     :param csv_path: Path to the csv file with lines in format [midi_name];[midi_url]
     :param midi_directory: Local location for the downloaded files
     """
