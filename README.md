@@ -1,2 +1,0 @@
-# FileScraper
-TODO: Write README
